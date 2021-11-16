@@ -1,0 +1,16 @@
+plugins {
+    id "java-library"
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+
+}
+
+test{
+    useJUnitPlatform()
+}
