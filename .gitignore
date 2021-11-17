@@ -1,8 +1,11 @@
 /.idea
 /.gradle
 /gradle
+/build
+#/src/test/resources
 
 gradlew
 gradlew.bat
+*.log
 
 

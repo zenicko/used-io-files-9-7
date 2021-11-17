@@ -5,12 +5,42 @@ repositories {
     mavenCentral()
 }
 
+//compileTestJava {
+//    options.encoding = "UTF-8"
+//}
+//
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
+
+    // JUnit5
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // Selenide
+    testImplementation 'com.codeborne:selenide:5.25.0-selenium-4.0.0'
+
+    // Apache Commons IO library
+    testImplementation 'commons-io:commons-io:2.11.0'
+
+    // SLF4J Simple Binding
+    testImplementation 'org.slf4j:slf4j-simple:1.7.30'
+
+    // PDF testing library
+    testImplementation 'com.codeborne:pdf-test:1.7.0'
+
+    // Excel testing library
+    testImplementation 'com.codeborne:xls-test:1.2'
+
+    // A simple library for reading and writing CSV in Java
+    testImplementation 'com.opencsv:opencsv:5.5.2'
 
 }
 
-test{
+test {
+    //systemProperty "file.encoding", "utf-8"
     useJUnitPlatform()
 }
+
